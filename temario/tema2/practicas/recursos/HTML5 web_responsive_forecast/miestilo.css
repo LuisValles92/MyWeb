@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    color: black;
+}
+
+main {
+    padding: 20px;
+    background-color: beige;
+}
+
+.location {
+    font-size: 40px;
+}
+
+p {
+    margin: 0;
+}
+
+.current {
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.current .visual,
+.description {
+    width: 50%;
+    float: left;
+}
+
+.icon {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+}
+
+.icon.rain {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Frain_s_cloudy.png?v=1588942692675");
+}
+
+.icon.sunny {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fsunny.png?v=1588942701577");
+}
+
+.icon.pc {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fpartly_cloudy.png?v=1588942697934");
+}
+
+.icon.sshowers {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Frain_s_cloudy.png?v=1588942692675");
+}
+
+.icon.cloudy {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fcloudy.png?v=1588942708821");
+}
+
+.icon.thunder {
+    background-image: url("https://cdn.glitch.com/837e1dde-8f7c-4df4-8d84-9200a53f45cc%2Fthunderstorms.png?v=1588942705076");
+}
+
+.visual .icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temp {
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.scale {
+    margin-top: 6px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.precip:before {
+    content: "Precipitation: ";
+    color: gray;
+}
+
+.humidity:before {
+    content: "Humidity: ";
+    color: gray;
+}
+
+.wind:before {
+    content: "Wind: ";
+    color: gray;
+}
+
+.pollen:before {
+    content: "Pollen Count: ";
+    color: gray;
+}
+
+.pcount:before {
+    content: "Pollen ";
+    color: gray;
+}
+
+.seven-day div {
+    vertical-align: middle;
+}
+
+.seven-day-fc {
+    padding: 10px;
+}
+
+.seven-day-fc div {
+    display: inline-block;
+}
+
+.seven-day-fc .date {
+    font-weight: bold;
+}
+
+.seven-day-fc .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.seven-day-fc .seven-day-temp {
+    text-align: center;
+}
+
+.seven-day-fc .temp-low,
+.seven-day-fc .temp-high {
+    display: block;
+}
+
+.seven-day-fc .pcount {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    .seven-day-fc {
+        border-top: 1px solid black;
+    }
+    .seven-day-fc:last-of-type {
+        border-bottom: 1px solid gray;
+    }
+    .seven-day-fc .date {
+        width: 30%;
+    }
+    .seven-day-fc .seven-day-temp {
+        width: 30%;
+    }
+    .seven-day-fc .pcount {
+        width: 15%;
+    }
+}
+
+@media (min-width: 601px) {
+    main {
+        width: 100%;
+        box-shadow: 2px 5px 5px black;
+    }
+    .seven-day-fc {
+        display: inline-block;
+        width: 13.5%;
+        /* border: dotted; */
+        font-size: 12px;
+    }
+    .seven-day-fc div {
+        display: block;
+    }
+    .seven-day-fc .date {
+        text-align: center;
+    }
+    .seven-day-fc .temp-low,
+    .seven-day-fc .temp-high {
+        display: inline;
+    }
+    .seven-day-fc .seven-day-temp {
+        font-size: 16px;
+    }
+    .seven-day-fc .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 500px) {
+    .seven-day-fc .temp-low,
+    .seven-day-fc .temp-high {
+        display: inline-block;
+        width: 45%;
+    }
+    
+    .seven-day-fc .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 700px) {
+    main {
+        width: 700px;
+    }
+}

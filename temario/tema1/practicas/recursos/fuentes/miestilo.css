@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    size: 28px;
+	padding: 100;
+}
+
+.fuenteAnton {
+    font-family: 'Anton', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.fuenteArchitectsDaughter {
+    font-family: 'Architects Daughter', cursive;
+    background-color: teal;
+    color: blue;
+}
+
+.fuenteIndieFlower {
+    font-family: 'Indie Flower', cursive;
+    background-color: crimson;
+    color: lime;
+}
+
+.fuenteSecularOne {
+    font-family: 'Secular One', sans-serif;
+    background-color: mediumslateblue;
+    color: black;
+}

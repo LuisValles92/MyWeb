@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="miestilo.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Chania</h1>
+        <button class="hamburguesa">
+            <i class="material-icons" onclick="openNav();">menu</i>
+        </button>
+    </header>
+
+    <main>
+        <nav id="idNav" class="col-s-3 col-3">
+            <ul id="idUl">
+                <li onclick="f1(this);">The Flight</li>
+                <li class="liMarcado" onclick="f2(this);">The City</li>
+                <li onclick="f3(this);">The Island</li>
+                <li onclick="f4(this);">The Food</li>
+            </ul>
+        </nav>
+
+        <div class="col-6 col-s-9">
+            <h1 id="idH1">The City</h1>
+            <p id="idP">Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        </div>
+
+        <div class="col-3 col-s-12">
+            <aside>
+                <h2>What?</h2>
+                <p>Chania is a city on the island of Crete.</p>
+                <h2>Where?</h2>
+                <p>Crete is a Greek island in the Mediterranean Sea.</p>
+                <h2>How?</h2>
+                <p>You can reach Chania airport from all over Europe.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+    </footer>
+
+</body>
+<script>
+    function openNav() {
+        if (document.getElementById("idNav").style.display == "") {
+            document.getElementById("idNav").style.display = "block";
+        } else {
+            document.getElementById("idNav").style.display = "";
+        }
+    }
+
+    function f(element) {
+        var htmlcollection_ul = document.getElementById("idUl").children;
+        for (let i = 0; i < htmlcollection_ul.length; i++) {
+            if (htmlcollection_ul.item(i).isSameNode(element)) {
+                htmlcollection_ul.item(i).className = "liMarcado";
+            } else {
+                htmlcollection_ul.item(i).removeAttribute("class");
+            }
+        }
+    }
+
+    function f1(element) {
+        f(element);
+        document.getElementById("idH1").textContent = "The Flight";
+        document.getElementById("idP").textContent = "This direct flight takes around 4 hours and 40 minutes and is operated by Ryanair.";
+    }
+
+    function f2(element) {
+        f(element);
+        document.getElementById("idH1").textContent = "The City";
+        document.getElementById("idP").textContent = "Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.";
+    }
+
+    function f3(element) {
+        f(element);
+        document.getElementById("idH1").textContent = "The Island";
+        document.getElementById("idP").textContent = "Chania is the second largest city of Crete and the capital of the Chania regional unit.";
+    }
+
+    function f4(element) {
+        f(element);
+        document.getElementById("idH1").textContent = "The Food";
+        document.getElementById("idP").textContent = "Indulge your palate with traditional Cretan specialties: eggs with staka, cretan kalitsounia (sweet mini cheese pies), lamb served with spiny chicory, dacos (the traditional hard Cretan bread accompanied with tomato, mizithra cheese and plenty of virgin Cretan oil), snails boubouristi (popping fried snails), haniotiko boureki (patty from Chania, a vegetable specialty) and kserotigana (honey dipped spiral pastries).";
+    }
+</script>
+
+</html>

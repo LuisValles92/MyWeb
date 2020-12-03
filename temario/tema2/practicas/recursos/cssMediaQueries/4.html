@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>RECURSO19</title>
+    <style>
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .contenedor {
+            text-align: justify;
+            background-color: #34e0ba;
+            color: #001083;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        footer {
+            text-align: right;
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        #parrafo1 {
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        #parrafo2 {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        @media only screen and (max-height: 684px) and (max-width: 1409px) {
+            #parrafo1 {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body onload="f();">
+    <header>
+        <h1>CSS3 MEDIA QUERIES @media RESPONSIVE - DISE&Ntilde;O ADAPTABLE</h1>
+    </header>
+    <main>
+        <div class="contenedor">
+            <p id="parrafo1">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p id="parrafo2">
+            </p>
+        </div>
+    </main>
+    <footer>
+        <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
+    </footer>
+    <script type="application/javascript">
+        function f() {
+            var nodo_parrafo2 = document.getElementById("parrafo2");
+            nodo_parrafo2.textContent = "(F5 para actualizar valores) altura interior => " + window.innerHeight + " anchura interior => " + window.innerWidth;
+        }
+    </script>
+</body>
+
+</html>

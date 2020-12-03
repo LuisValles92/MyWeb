@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>B.N.H. CUADRO B&Uacute;S.</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        header {
+            background-color: #34e0ba;
+            color: #001083;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+        
+        nav ul {
+            background-color: #34e0ba;
+            /* Quitar bolitas o cambiarlas por otra cosa */
+            list-style: none;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            /* text-align: left; */
+        }
+        
+        nav li {
+            display: inline;
+            /* float: left; */
+            /* margin: 30px; */
+        }
+        
+        nav li a {
+            background-color: #001083;
+            color: #f5f5f5;
+            border: 2px solid #f5f5f5;
+            /* border-top: 2px solid #f5f5f5; */
+            /* border-bottom: 2px solid #f5f5f5; */
+            text-align: center;
+            /* Quitar el subrayado de los enlaces de li de nav */
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 20px;
+            /* float: left; */
+        }
+        /* Pseudoclase hover - Cuando paso sobre el enlance */
+        
+        nav li a:hover {
+            background-color: #f5f5f5;
+            color: #001083;
+            border: 2px solid #001083;
+        }
+        
+        main {
+            background-color: #34e0ba;
+            color: #001083;
+            padding: 20px;
+            border-radius: 15px;
+            /* margin-top: 10px; */
+            margin-bottom: 10px;
+        }
+        
+        main p {
+            text-align: justify;
+        }
+        
+        footer {
+            clear: both;
+            background-color: #34e0ba;
+            color: #001083;
+            text-align: right;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+        
+        nav ul li a i {
+            vertical-align: bottom;
+            padding-right: 10px;
+        }
+        
+        nav ul li form {
+            float: right;
+            /* vertical-align: middle; */
+            background-color: #001083;
+            color: #f5f5f5;
+            border: 2px solid #f5f5f5;
+            /* border-top: 2px solid #f5f5f5; */
+            /* border-bottom: 2px solid #f5f5f5; */
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: -25px;
+        }
+        
+        nav ul li form input,
+        button {
+            vertical-align: middle;
+            font-size: 20px;
+        }
+        
+        nav ul li form input {
+            padding-left: 10px;
+        }
+        
+        nav ul li form button {
+            color: #001083;
+            background-color: #f5f5f5;
+        }
+        
+        main button {
+            color: #f5f5f5;
+            background-color: #001083;
+            box-shadow: 2px 5px 5px white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        
+        main button:hover {
+            color: #001083;
+            background-color: #f5f5f5;
+            box-shadow: 2px 5px 5px #001083;
+        }
+        
+        .a_activo {
+            background-color: #f5f5f5;
+            color: #001083;
+            border: 2px solid #001083;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BARRA DE NAVEGACI&Oacute;N HORIZONTAL CON CUADRO DE B&Uacute;SQUEDA</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#1" class="a_activo"><i class="material-icons">home</i>HOME</a>
+            </li>
+            <li>
+                <a href="#2"><i class="material-icons">perm_device_information</i>ABOUT</a>
+            </li>
+            <li>
+                <a href="#3"><i class="material-icons">contacts</i>CONTACT</a>
+            </li>
+            <li>
+                <form action="#4">
+                    <input type="text" placeholder="Search">
+                    <button><i class="material-icons">search</i></button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+            the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during
+            the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33
+            from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+            desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+            accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <ul>
+            <li><button onclick=""><i class="material-icons">favorite</i></button></li>
+        </ul>
+
+    </main>
+    <footer>
+        LUIS VALLES PASTOR
+    </footer>
+</body>
+
+</html>

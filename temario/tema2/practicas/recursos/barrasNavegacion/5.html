@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>RECURSO10</title>
+    <style>
+        body {
+            font-size: 30px;
+        }
+        
+        header {
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        .div_1 {
+            position: relative;
+        }
+        /* .div_2 {
+            position: absolute;
+        } */
+        
+        .div_1:hover .menu {
+            display: block;
+        }
+        
+        .menu {
+            position: absolute;
+            display: none;
+            box-shadow: 6px 15px 15px #001083;
+        }
+        
+        .div_1 a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            background-color: #34e0ba;
+            text-align: center;
+            color: #001083;
+            width: 200px;
+        }
+        
+        .div_1 a:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <header>MI MEN&Uacute; 1</header>
+    <main>
+        <div class="div_1">
+            <div class="div_2">
+                <a href="#0">LINK 0</a>
+            </div>
+            <div class="menu">
+                <a href="#1">LINK 1</a>
+                <a href="#2">LINK 2</a>
+                <a href="#3">LINK 3</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

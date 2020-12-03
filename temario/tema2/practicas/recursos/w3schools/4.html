@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>RECURSO9</title>
+    <style>
+        div {
+            padding: 10px;
+            float: left;
+            width: 25%;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin-right: 10px;
+        }
+        
+        header {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+        
+        img {
+            width: 100%;
+            box-shadow: 6px 15px 15px black;
+        }
+        
+        .img1:hover {
+            display: none;
+        }
+        
+		.box2:hover img.img2{
+			visibility: hidden;
+		}
+		
+		.imgbox:hover img.img2 {
+            Visibility: hidden;
+        }
+        
+        button {
+            margin-top: 30px;
+            width: 100%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <header>Box 1</header>
+        <img class="img1" src="https://www.w3schools.com/css/img_5terre.jpg" />
+        <button onclick="f1();">Remove</button>
+    </div>
+    <div class="box2" id="box2">
+        <header>Box 2</header>
+        <img class="img2" src="https://www.w3schools.com/css/img_lights.jpg" />
+        <button onclick="f2();">Hide</button>
+    </div>
+    <div id="box3">
+        <header>Box 3</header>
+        <img src="https://www.w3schools.com/css/img_forest.jpg" />
+        <button onclick="f3();">Reset All</button>
+    </div>
+    <script type="application/javascript">
+        function f1() {
+            document.getElementById("box1").style.display = "none";
+        }
+
+        function f2() {
+            document.getElementById("box2").style.visibility = "hidden";
+        }
+
+        function f3() {
+            document.getElementById("box1").style.display = "block";
+            document.getElementById("box2").style.visibility = "visible";
+        }
+    </script>
+</body>
+
+</html>
