@@ -1,0 +1,33 @@
+a {
+  color: #fc3;
+}
+
+nav {
+  background-color: #fc3;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+footer {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+ol {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+ol li {
+  font-size: 2em;
+  line-height: 1.4;
+}
+ol li p {
+  color: #333;
+}
+
+/*# sourceMappingURL=styles.css.map */

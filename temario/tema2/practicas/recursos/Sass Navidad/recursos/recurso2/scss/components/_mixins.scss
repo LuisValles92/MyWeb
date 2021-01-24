@@ -1,0 +1,114 @@
+/*
+Mixins
+*/
+
+@mixin title-style {
+    margin: 0 0 20px 0;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.main h2 {
+    @include title-style;
+}
+
+
+/*
+Mixins: regla adicional
+*/
+
+section.secondary h3 {
+    @include title-style;
+    color: #999;
+}
+
+
+/*
+Mixins: pasando un argumento
+*/
+
+@mixin title-style-2($color) {
+    margin: 0 0 20px 0;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+}
+
+section.main h2 {
+    @include title-style-2(#c63);
+}
+
+
+/*
+Mixins: pasando multiples argumentos
+*/
+
+@mixin title-style-3($color, $background-color) {
+    margin: 0 0 20px 0;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+    background-color: $background-color;
+}
+
+section.main h2 {
+    @include title-style-3(#c63, #eee);
+}
+
+section.secondary h3 {
+    @include title-style-3(#39c, #333);
+}
+
+
+/*
+Mixins: pasando argumentos con valores predeterminados
+Casos 1 y 2
+*/
+
+@mixin title-style-4($color, $background-color: #eee) {
+    margin: 0 0 20px 0;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+    background-color: $background-color;
+}
+
+section.main h2 {
+    @include title-style-4(#c63);
+}
+
+section.secondary h3 {
+    @include title-style-4(#39c, #333);
+}
+
+
+/*
+Mixins: pasando argumentos con valores predeterminados 2
+Casos 3 y 4
+*/
+
+@mixin title-style-5($color: blue, $background-color: green) {
+    margin: 0 0 20px 0;
+    font-family: $font-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color;
+    background-color: $background-color;
+}
+
+section.main h2 {
+    @include title-style-5($background-color: pink);
+}
+
+section.main h3 {
+    @include title-style-5();
+}

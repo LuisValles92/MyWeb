@@ -1,0 +1,38 @@
+/*
+Variables
+*/
+
+$color-main: #333;
+$color-light: #999;
+$color-accent: #ea4c89;
+$font-sans: "Proxima Nova",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$font-serif: Jubilat,
+Georgia,
+serif;
+body {
+    padding: 0 8%;
+    font-family: $font-sans;
+    font-size: 100%;
+    color: $color-main;
+    background-color: #fff url(../img/bg.jpg) repeat-x -80% 0;
+}
+
+
+/*
+Variables: paleta de colores
+*/
+
+$color-main: #333;
+$color-light: #999;
+$color-accent: #ea4c89;
+section.primary {
+    background-color: darken($color-accent, 30%);
+}
+
+section.secondary {
+    background-color: lighten($color-accent, 30%);
+}

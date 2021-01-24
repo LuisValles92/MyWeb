@@ -1,0 +1,12 @@
+//nesting es anidar selectores
+.menu {
+    margin: 0;
+    .link {
+        text-decoration: none;
+        grid-template: {
+            columns: 10px 10px;
+            rows: auto;
+            areas: header header;
+        }
+    }
+}

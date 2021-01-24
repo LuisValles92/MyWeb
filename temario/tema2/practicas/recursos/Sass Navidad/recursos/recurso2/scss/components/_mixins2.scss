@@ -1,0 +1,85 @@
+/*
+Mixins: border-radius
+*/
+
+@mixin rounded($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+ol.slats li a img {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 4px;
+    border: 1px solid #ddd;
+    @include rounded(3px);
+}
+
+div.module {
+    padding: 20px;
+    background: #eee;
+    @include rounded(10px);
+}
+
+
+/*
+Mixins: box-shadow
+*/
+
+@mixin shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+div.module {
+    padding: 20px;
+    background: #eee;
+    @include rounded(10px);
+    @include shadow(0, 1px, 2px, rgba(0, 0, 0, .5));
+}
+
+
+/*
+Mixins: CSS3 gradients
+*/
+
+@mixin linear-gradient($from, $to) {
+    /* Fallback for sad browsers */
+    background-color: $to;
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient($from, $to);
+    /* Opera */
+    background-image: -o-linear-gradient($from, $to);
+    /* WebKit (Safari 4+, Chrome 1+)
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+    */
+    /* WebKit (Chrome 11+) */
+    background-image: -webkit-linear-gradient($from, $to);
+    /* IE10 */
+    background-image: -ms-linear-gradient($from, $to);
+    /* W3C */
+    background-image: linear-gradient($from, $to);
+}
+
+header nav[role="navigation"] ul li.active a {
+    padding: 3px 8px;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    @include linear-gradient(#ff70b1, #d42a78);
+}
+
+
+/*
+Mixins: border-radius y CSS3 gradients
+*/
+
+button {
+    padding: 5px 10px;
+    color: #fff;
+    @include rounded(6px);
+    @include linear-gradient(#42b3e2, #1a6798);
+}

@@ -1,0 +1,40 @@
+$number: 1;
+$number2: 10px;
+$number3: 20s;
+$string: 'EDteam';
+$string2: none;
+$color: red;
+//$color2: hsl(200, 100, 50);
+$color3: #aaff99;
+$list: 1px solid red;
+$list2: primary,
+secondary,
+tertiary;
+$boolean: true;
+//Los mapas son como un objeto: clave - valor
+$map:( primary: red, secondary: green, tertiary: blue);
+main {
+    //@debug es como un console.log, obtiene el valor de la variable
+    @debug type-of($number);
+    @debug $number;
+    @debug type-of($number2);
+    @debug $number2;
+    @debug type-of($string2);
+    @debug $string2;
+    @debug type-of($color);
+    @debug $color;
+    @debug type-of($color3);
+    @debug $color3;
+    @debug type-of($list);
+    @debug type-of($list2);
+    //
+    color: $color;
+}
+
+p {
+    background-color: $color;
+}
+
+.tabla {
+    border: 1px solid $color;
+}

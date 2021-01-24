@@ -1,0 +1,8 @@
+body {
+    color: red;
+}
+
+@import "components/nesting";
+@import "components/datos";
+@import "components/mixins";
+@import "components/ciclos";

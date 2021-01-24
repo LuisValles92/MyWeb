@@ -1,0 +1,21 @@
+//mixins hace referencia a trozos de código que se pueden reutilizar
+//aceptan parametros
+@mixin button($breakpoint) {
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1em;
+    &:hover {
+        background-color: #ff0000;
+    }
+    @media screen and (min-width: $breakpoint) {
+        background-color: green;
+    }
+}
+
+.button {
+    @include button(400px);
+}
+
+.suscription {
+    @include button(1000px);
+}

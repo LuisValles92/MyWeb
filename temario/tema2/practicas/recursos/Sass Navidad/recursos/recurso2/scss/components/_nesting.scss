@@ -1,0 +1,78 @@
+/*
+Nesting
+
+Nesting: 
+    font size, family, weight
+    text ...
+    backgroung ...
+*/
+
+header[role="banner"] {
+    margin: 20px 0 30px 0;
+    border-bottom: 4px solid #333;
+    #logo {
+        float: left;
+        margin: 0 20px 0 0;
+        img {
+            display: block;
+            opacity: .95;
+        }
+    }
+    h1 {
+        padding: 15px 0;
+        font: {
+            size: 54px;
+            family: Jubilat, Georgia, serif;
+            weight: bold;
+        }
+        text: {
+            transform: uppercase;
+            decoration: underline;
+            align: center;
+        }
+        background: {
+            color: #ea4c89;
+            size: 16px 16px;
+            image: url(sasquatch.png);
+            repeat: no-repeat;
+            position: top left;
+        }
+        line-height: 1;
+    }
+}
+
+
+/*
+Nesting: Uso del caracter &
+*/
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+    border-bottom: 2px solid red;
+    &:hover {
+        color: maroon;
+        border-color: maroon;
+    }
+}
+
+li a {
+    color: blue;
+    &.alert {
+        color: red;
+    }
+    &.success {
+        color: green;
+    }
+}
+
+section.main p {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    body.store & {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}

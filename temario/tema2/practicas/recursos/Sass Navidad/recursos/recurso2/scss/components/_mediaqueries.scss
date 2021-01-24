@@ -1,0 +1,132 @@
+/*
+MEDIA QUERIES
+*/
+
+$width-small: 500px;
+$width-medium: 800px;
+$width-large: 1200px;
+section.main {
+    font-size: 16px;
+    line-height: 1.4;
+    @media screen and (max-width: $width-large - 1) {
+        float: left;
+        width: 65%;
+    }
+    @media screen and (max-width: $width-medium+1) {
+        float: none;
+        width: auto;
+    }
+    @media screen and (max-width: $width-small) {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+
+/*
+MEDIA QUERIES
+interpolation brackets # { }
+*/
+
+$mobile-first: "screen and (min-width: 300px)";
+@media #{$mobile-first} {
+    #content {
+        font-size: 12px;
+        line-height: 1;
+    }
+}
+
+
+/*
+MEDIA QUERIES
+Combinando bloques de @content y mixins
+*/
+
+$width-small: 400px;
+$width-medium: 760px;
+$width-large: 1200px;
+@mixin responsive($width) {
+    @if $width==wide-screens {
+        @media only screen and (max-width: $width-large) {
+            @content;
+        }
+    }
+    @else if $width==medium-screens {
+        @media only screen and (max-width: $width-medium) {
+            @content;
+        }
+    }
+    @else if $width==small-screens {
+        @media only screen and (max-width: $width-small) {
+            @content;
+        }
+    }
+}
+
+
+/*
+MEDIA QUERIES
+Combinando bloques de @content y mixins
+1
+*/
+
+#content {
+    float: left;
+    width: 70%;
+    @include responsive(wide-screens) {
+        width: 80%;
+    }
+    @include responsive(medium-screens) {
+        width: 50%;
+        font-size: 14px;
+    }
+    @include responsive(small-screens) {
+        float: none;
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+
+/*
+MEDIA QUERIES
+Combinando bloques de @content y mixins
+2
+*/
+
+h1 {
+    font-size: 40px;
+    @include responsive(wide-screens) {
+        font-size: 48px;
+    }
+    @include responsive(medium-screens) {
+        font-size: 32px;
+    }
+    @include responsive(small-screens) {
+        font-size: 20px;
+    }
+}
+
+
+/*
+MEDIA QUERIES
+Combinando bloques de @content y mixins
+3
+*/
+
+blockquote {
+    width: 100%;
+}
+
+figure {
+    margin: 0 0 20px 0;
+}
+
+@media only screen and (max-width: $width-large) {
+    blockquote {
+        width: 80%;
+    }
+    figure {
+        margin: 0 0 30px 0;
+    }
+}
