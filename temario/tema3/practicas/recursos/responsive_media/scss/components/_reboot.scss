@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+    margin: 0px;
+    background-color: $white;
+}
+
+header {
+    background-color: $primary_color;
+    color: $secondary_color;
+    padding: 15px;
+    text-align: center;
+}
+
+.hamburguesa {
+    display: none;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin activo {
+    background-color: $secondary_color;
+    color: $white;
+    box-shadow: 2px 5px 5px $white;
+}
+
+@mixin inactivo {
+    background-color: $gray;
+    color: black;
+    box-shadow: 2px 5px 5px black;
+}
+
+nav {
+    background-color: $primary_color;
+    padding: 10px;
+    ul {
+        text-align: center;
+        padding: 0px;
+    }
+    li {
+        display: inline;
+        margin: 30px;
+        a {
+            @include inactivo();
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            &:hover {
+                @include activo();
+            }
+        }
+    }
+}
+
+.aMarcado {
+    @include activo();
+}
+
+figure {
+    margin: 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 4px;
+}
+
+.column {
+    padding: 4px 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+footer {
+    background-color: $primary_color;
+    color: $secondary_color;
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+    padding: 1px;
+}
+
+.controles {
+    text-align: center;
+    padding: 15px;
+    button {
+        @include inactivo();
+        &:hover {
+            @include activo();
+        }
+        i {
+            $valor: 40px;
+            height: $valor;
+            width: $valor;
+            font-size: $valor;
+        }
+    }
+}
+
+video {
+    display: block;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    margin-bottom: 10px;
+}
+
+#info_video {
+    text-align: center;
+    display: none;
+}
