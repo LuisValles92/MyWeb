@@ -5,5 +5,3 @@ function openNav() {
         document.getElementById("idNav").style.display = "";
     }
 }
-
-document.getElementById("idUl").children[0].focus();
