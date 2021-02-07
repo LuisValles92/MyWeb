@@ -92,6 +92,10 @@ figure {
   nav {
     display: none;
   }
+
+  footer {
+    font-size: 14px;
+  }
 }
 /* For tablets: */
 @media only screen and (min-width: 600px) {
