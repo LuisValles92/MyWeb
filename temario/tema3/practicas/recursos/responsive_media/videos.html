@@ -26,16 +26,21 @@
         </nav>
         <div class="controles">
             <button onclick="playVideo();">
-                <i class="material-icons">play_circle_outline</i>
-            </button>
-            <button onclick="pauseVideo();">
-                <i class="material-icons">pause_circle_outline</i>
+                <i class="material-icons" id="iPlayPause">play_circle_outline</i>
             </button>
             <button onclick="stopVideo()">
                 <i class="material-icons">stop</i>
             </button>
             <button onclick="rewindVideo();">
                 <i class="material-icons">fast_rewind</i>
+            </button>
+        </div>
+        <div class="subcontroles">
+            <button onclick="replayTenSeconds();">
+                <i class="material-icons">replay_10</i>
+            </button>
+            <button onclick="forwardTenSeconds();">
+                <i class="material-icons">forward_10</i>
             </button>
             <button onclick="previous();">
                 <i class="material-icons">skip_previous</i>

@@ -9,26 +9,20 @@ function activeInfo_video() {
 
 function playVideo() {
     activeInfo_video();
-    theVideo.innerHTML = "";
-    theVideo.innerHTML = "<source src='videos/" + videos[current] + ".mp4' type='video/mp4'>";
-    theVideo.innerHTML += "<source src='videos/" + videos[current] + ".ogg' type='video/ogg'>";
-    if (current == 1) {
-        theVideo.innerHTML += "<track kind=captions src=videos/subs/chelovideo2.en.vtt srclang=en lang=en label='English' default>";
-        theVideo.innerHTML += "<track kind=captions src=videos/subs/chelovideo2.es.vtt srclang=es lang=es label='Spanish'>";
+    if(theVideo.paused){
+        theVideo.play();
+        document.getElementById("iPlayPause").textContent="pause_circle_outline";
+        info.innerHTML = 'Now playing ' + videos[current];
+    }else{
+        theVideo.pause();
+        document.getElementById("iPlayPause").textContent="play_circle_outline";
+        info.innerHTML = videos[current] + ' paused';
     }
-    theVideo.load();
-    theVideo.play();
-    info.innerHTML = 'Now playing ' + videos[current];
-}
-
-function pauseVideo() {
-    activeInfo_video();
-    theVideo.pause();
-    info.innerHTML = videos[current] + ' paused';
 }
 
 function stopVideo() {
     activeInfo_video();
+    document.getElementById("iPlayPause").textContent="play_circle_outline";
     theVideo.currentTime = 0;
     theVideo.pause();
     info.innerHTML = videos[current] + ' stopped';
@@ -40,16 +34,45 @@ function rewindVideo() {
     info.innerHTML = videos[current] + ' rewinded';
 }
 
+function replayTenSeconds() {
+    activeInfo_video();
+    theVideo.currentTime -= 10;
+    info.innerHTML = videos[current] + ' replay 10 seconds';
+}
+
+function forwardTenSeconds() {
+    activeInfo_video();
+    theVideo.currentTime += 10;
+    info.innerHTML = videos[current] + ' forward 10 seconds';
+}
+
+function loadVideo(){
+    theVideo.innerHTML = "";
+    theVideo.innerHTML = "<source src='videos/" + videos[current] + ".mp4' type='video/mp4'>";
+    theVideo.innerHTML += "<source src='videos/" + videos[current] + ".ogg' type='video/ogg'>";
+    if (current == 1) {
+        theVideo.innerHTML += "<track kind=captions src=videos/subs/chelovideo2.en.vtt srclang=en lang=en label='English' default>";
+        theVideo.innerHTML += "<track kind=captions src=videos/subs/chelovideo2.es.vtt srclang=es lang=es label='Spanish'>";
+    }
+    theVideo.load();
+}
+
 function previous() {
+    activeInfo_video();
+    document.getElementById("iPlayPause").textContent="play_circle_outline";
     if (current > 0) {
         current--;
     }
-    playVideo();
+    loadVideo();
+    info.innerHTML = videos[current] + ' ready';
 }
 
 function next() {
+    activeInfo_video();
+    document.getElementById("iPlayPause").textContent="play_circle_outline";
     if (current < videos.length - 1) {
         current++;
     }
-    playVideo();
+    loadVideo();
+    info.innerHTML = videos[current] + ' ready';
 }

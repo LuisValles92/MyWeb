@@ -82,24 +82,29 @@ footer {
   padding: 1px;
 }
 
-.controles {
+.controles, .subcontroles {
   text-align: center;
   padding: 15px;
 }
-.controles button {
+.controles button, .subcontroles button {
+  cursor: pointer;
   background-color: #bdbdbd;
   color: black;
   box-shadow: 2px 5px 5px black;
 }
-.controles button:hover {
+.controles button:hover, .subcontroles button:hover {
   background-color: #001083;
   color: #fafafa;
   box-shadow: 2px 5px 5px #fafafa;
 }
-.controles button i {
+.controles button i, .subcontroles button i {
   height: 40px;
   width: 40px;
   font-size: 40px;
+}
+
+.subcontroles {
+  padding-top: 0px;
 }
 
 video {

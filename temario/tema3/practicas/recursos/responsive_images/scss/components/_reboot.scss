@@ -60,17 +60,16 @@ aside {
     text-align: center;
     font-size: 14px;
     box-shadow: 2px 5px 5px #001083;
-    margin-bottom: 80px;
 }
 
 footer {
     background-color: $primary_color;
     color: $secondary_color;
     text-align: center;
-    padding: 1px;
-    position: fixed;
+    position: sticky;
     bottom: 0px;
-    width: 100%;
+    padding: 1px;
+    clear: both;
 }
 
 #idP,
@@ -78,10 +77,6 @@ footer {
 img {
     text-align: justify;
     width: 100%;
-}
-
-#idP2 {
-    margin-bottom: 80px;
 }
 
 figure {
