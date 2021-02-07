@@ -34,6 +34,10 @@ function rewindVideo() {
     info.innerHTML = videos[current] + ' rewinded';
 }
 
+function fullscreenVideo() {
+    theVideo.requestFullscreen();      
+}
+
 function replayTenSeconds() {
     activeInfo_video();
     theVideo.currentTime -= 10;
