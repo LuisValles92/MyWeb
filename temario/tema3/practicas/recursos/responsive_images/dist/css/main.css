@@ -16,6 +16,7 @@ header {
 }
 
 .hamburguesa {
+  cursor: pointer;
   display: none;
   margin-left: auto;
   margin-right: auto;
