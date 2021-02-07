@@ -1,0 +1,39 @@
+$bp:( s: 600px, m:768px);
+
+/* For mobile phones: */
+
+@media only screen and (max-width: map-get($bp, s)) {
+    .hamburguesa {
+        display: block;
+    }
+    nav {
+        display: none;
+    }
+    footer{
+        font-size: 14px;
+    }
+}
+
+
+/* For tablets: */
+
+@media only screen and (min-width: map-get($bp, s)) {
+    $var: 100/12;
+    @for $i from 1 through 12 {
+        .col-s-#{$i} {
+            width: $i*$var*1%;
+        }
+    }
+}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: map-get($bp, m)) {
+    $var: 100/12;
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: $i*$var*1%;
+        }
+    }
+}

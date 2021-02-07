@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCello</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="dist/css/main.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>MyCello</h1>
+        <button class="hamburguesa" tabindex="0" onkeypress="if(event.key=='Enter')openNav();">
+            <i class="material-icons" onclick="openNav();">menu</i>
+        </button>
+    </header>
+
+    <main>
+        <nav id="idNav" class="col-s-3 col-3">
+            <ul id="idUl">
+                <li class="liMarcado" onclick="f1(this);" tabindex="0" onkeypress="if(event.key=='Enter')f1(this);">Home</li>
+                <li onclick="f2(this);" tabindex="0" onkeypress="if(event.key=='Enter')f2(this);">Techniques</li>
+                <li onclick="f3(this);" tabindex="0" onkeypress="if(event.key=='Enter')f3(this);">Etymology</li>
+                <li onclick="window.open('pdf/Capturas.pdf', '_blank');" tabindex="0" onkeypress="if(event.key=='Enter')window.open('pdf/Capturas.pdf', '_blank');">Responsive Images (Screenshots)</li>
+                <li onclick="window.location='../responsive_multimedia';" tabindex="0" onkeypress="if(event.key=='Enter')window.location='../responsive_multimedia';">Multimedia</li>
+            </ul>
+        </nav>
+
+        <div class="col-s-9 col-6">
+            <h1 id="idH1" tabindex="0">Home</h1>
+            <p id="idP" tabindex="0">
+                The cello or violoncello is a bowed (and occasionally plucked) string instrument of the violin family. Its four strings are usually tuned in perfect fifths: from low to high, C2, G2, D3 and A3. The viola's four strings are each an octave higher. Music
+                for the cello is generally written in the bass clef, with tenor clef and treble clef used for higher-range passages.
+            </p>
+            <figure>
+                <picture id="pic">
+                    <source media="(min-width: 768px)" srcset="images\cello1_large_2x.jpg, images\cello1_large_1x.jpg" />
+                    <source media="(min-width: 600px)" srcset="images\cello1_medium.jpg" />
+                    <img src="images\cello1_small.jpg" alt="Seated artist playing cello." tabindex="0">
+                </picture>
+            </figure>
+            <p id="idP2" tabindex="0">
+                Played by a cellist or violoncellist, it enjoys a large solo repertoire with and without accompaniment, as well as numerous concerti. As a solo instrument, the cello uses its whole range, from bass to soprano, and in chamber music such as string quartets
+                and the orchestra's string section, it often plays the bass part, where it may be reinforced an octave lower by the double basses. Figured bass music of the Baroque-era typically assumes a cello, viola da gamba or bassoon as part of the
+                basso continuo group alongside chordal instruments such as organ, harpsichord, lute or theorbo. Cellos are found in many other ensembles, from modern Chinese orchestras to cello rock bands.
+            </p>
+        </div>
+        <div class="col-s-12 col-3">
+            <aside>
+                <h2 tabindex="0">Other names</h2>
+                <p tabindex="0">Violoncello</p>
+                <h2 tabindex="0">Hornbostel–Sachs classification</h2>
+                <p tabindex="0">321.322-71 (Composite chordophone sounded by a bow)</p>
+                <h2 tabindex="0">Developed</h2>
+                <p tabindex="0">c. 1660 from bass violin</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer tabindex="0">
+        <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
+    </footer>
+
+    <script src="dist/js/main_script.js"></script>
+</body>
+
+</html>

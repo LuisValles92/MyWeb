@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCello Videos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="dist/css/main.css" />
+</head>
+
+<body>
+    <header>
+        <h1>MyCello Multimedia</h1>
+        <button class="hamburguesa" tabindex="0" onkeypress="if(event.key=='Enter')openNav();">
+            <i class="material-icons" onclick="openNav();">menu</i>
+        </button>
+    </header>
+
+    <main>
+        <nav id="idNav">
+            <ul id="idUl">
+                <li><a href=".">Images</a></li>
+                <li><a class="aMarcado" href="videos.html">Videos</a></li>
+                <li><a href="../responsive_images">Home</a></li>
+            </ul>
+        </nav>
+        <div class="controles">
+            <button onclick="playVideo();">
+                <i class="material-icons" id="iPlayPause">play_circle_outline</i>
+            </button>
+            <button onclick="stopVideo()">
+                <i class="material-icons">stop</i>
+            </button>
+            <button onclick="rewindVideo();">
+                <i class="material-icons">fast_rewind</i>
+            </button>
+            <button onclick="fullscreenVideo();">
+                <i class="material-icons">fullscreen</i>
+            </button>
+        </div>
+        <div class="subcontroles">
+            <button onclick="replayTenSeconds();">
+                <i class="material-icons">replay_10</i>
+            </button>
+            <button onclick="forwardTenSeconds();">
+                <i class="material-icons">forward_10</i>
+            </button>
+            <button onclick="previous();">
+                <i class="material-icons">skip_previous</i>
+            </button>
+            <button onclick="next();">
+                <i class="material-icons">skip_next</i>
+            </button>
+        </div>
+        <p id="info_video" tabindex="0"></p>
+        <video poster="images/cello2_large_2x.jpg" id="myVideo">
+            <source src='videos/chelovideo1.mp4' type='video/mp4'>
+            <source src='videos/chelovideo1.ogg' type='video/ogg'>
+            <p>Su navegador no soporta la etiqueta HTML5 de video, <a href="videos/chelovideo1.mp4">este es un enlace directo al vídeo</a></p>
+        </video>
+    </main>
+
+    <footer tabindex="0">
+        <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
+    </footer>
+    
+    <script src="dist/js/main_script.js"></script>
+    <script src="dist/js/video_script.js"></script>
+</body>
+
+</html>

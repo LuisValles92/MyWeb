@@ -1,0 +1,58 @@
+$bp:( s: 600px, m:768px);
+
+/* For mobile phones: */
+
+@media only screen and (max-width: map-get($bp, s)) {
+    .hamburguesa {
+        display: block;
+    }
+    nav {
+        display: none;
+        li {
+            display: block;
+            margin: 0px;
+            padding: 10px;
+        }
+        li a {
+            font-size: 18px;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    video {
+        width: 100%;
+    }
+    footer{
+        font-size: 14px;
+    }
+}
+
+
+/* For tablets: */
+
+@media only screen and (min-width: map-get($bp, s)) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    video {
+        width: 100%;
+    }
+}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: map-get($bp, m)) {
+    .column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+    video {
+        width: 70%;
+    }
+}

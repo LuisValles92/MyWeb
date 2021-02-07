@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  margin: 0;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #34e0ba;
+  color: #001083;
+  padding: 15px;
+  text-align: center;
+}
+
+.hamburguesa {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+nav li {
+  cursor: pointer;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #bdbdbd;
+  color: black;
+  box-shadow: 2px 5px 5px black;
+}
+nav li:hover {
+  background-color: #00ffb5;
+  color: #001083;
+  box-shadow: 2px 5px 5px #001083;
+}
+
+.liMarcado {
+  background-color: #00ffb5;
+  color: #001083;
+  box-shadow: 2px 5px 5px #001083;
+}
+
+aside {
+  background-color: #00ffb5;
+  padding: 15px;
+  color: #001083;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 2px 5px 5px #001083;
+}
+
+footer {
+  background-color: #34e0ba;
+  color: #001083;
+  text-align: center;
+  position: sticky;
+  bottom: 0px;
+  padding: 1px;
+  clear: both;
+}
+
+#idP,
+#idP2,
+img {
+  text-align: justify;
+  width: 100%;
+}
+
+figure {
+  margin: 0%;
+}
+
+[class*=col-] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+  .hamburguesa {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+  .col-s-1 {
+    width: 8.3333333333%;
+  }
+
+  .col-s-2 {
+    width: 16.6666666667%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.3333333333%;
+  }
+
+  .col-s-5 {
+    width: 41.6666666667%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.3333333333%;
+  }
+
+  .col-s-8 {
+    width: 66.6666666667%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.3333333333%;
+  }
+
+  .col-s-11 {
+    width: 91.6666666667%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.3333333333%;
+  }
+
+  .col-2 {
+    width: 16.6666666667%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.3333333333%;
+  }
+
+  .col-5 {
+    width: 41.6666666667%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.3333333333%;
+  }
+
+  .col-8 {
+    width: 66.6666666667%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.3333333333%;
+  }
+
+  .col-11 {
+    width: 91.6666666667%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
