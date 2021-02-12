@@ -120,6 +120,17 @@ video {
   display: none;
 }
 
+#p_play,
+#p_stop,
+#p_rewind,
+#p_full,
+#p_rs,
+#p_fs,
+#p_previous,
+#p_next {
+  display: none;
+}
+
 /* For mobile phones: */
 @media only screen and (max-width: 600px) {
   .hamburguesa {

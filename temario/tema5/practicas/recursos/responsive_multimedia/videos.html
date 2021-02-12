@@ -25,30 +25,38 @@
             </ul>
         </nav>
         <div class="controles">
-            <button onclick="playVideo();">
+            <button aria-labelledby="p_play" onclick="playVideo();">
+                <p id="p_play">Play video</p>
                 <i class="material-icons" id="iPlayPause">play_circle_outline</i>
             </button>
-            <button onclick="stopVideo()">
+            <button aria-labelledby="p_stop" onclick="stopVideo()">
+                <p id="p_stop">Stop video</p>
                 <i class="material-icons">stop</i>
             </button>
-            <button onclick="rewindVideo();">
+            <button aria-labelledby="p_rewind" onclick="rewindVideo();">
+                <p id="p_rewind">Rewind video</p>
                 <i class="material-icons">fast_rewind</i>
             </button>
-            <button onclick="fullscreenVideo();">
+            <button aria-labelledby="p_full" onclick="fullscreenVideo();">
+                <p id="p_full">Fullscreen video</p>
                 <i class="material-icons">fullscreen</i>
             </button>
         </div>
         <div class="subcontroles">
-            <button onclick="replayTenSeconds();">
+            <button aria-labelledby="p_rs" onclick="replayTenSeconds();">
+                <p id="p_rs">Replay 10 seconds video</p>
                 <i class="material-icons">replay_10</i>
             </button>
-            <button onclick="forwardTenSeconds();">
+            <button aria-labelledby="p_fs" onclick="forwardTenSeconds();">
+                <p id="p_fs">Forward 10 seconds video</p>
                 <i class="material-icons">forward_10</i>
             </button>
-            <button onclick="previous();">
+            <button aria-labelledby="p_previous" onclick="previous();">
+                <p id="p_previous">Previous video</p>
                 <i class="material-icons">skip_previous</i>
             </button>
-            <button onclick="next();">
+            <button aria-labelledby="p_next" onclick="next();">
+                <p id="p_next">Next video</p>
                 <i class="material-icons">skip_next</i>
             </button>
         </div>
@@ -63,7 +71,7 @@
     <footer tabindex="0">
         <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
     </footer>
-    
+
     <script src="dist/js/main_script.js"></script>
     <script src="dist/js/video_script.js"></script>
 </body>

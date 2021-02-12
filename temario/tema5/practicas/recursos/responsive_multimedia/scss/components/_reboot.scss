@@ -109,7 +109,7 @@ footer {
     }
 }
 
-.subcontroles{
+.subcontroles {
     @extend .controles;
     padding-top: 0px;
 }
@@ -125,5 +125,16 @@ video {
 
 #info_video {
     text-align: center;
+    display: none;
+}
+
+#p_play,
+#p_stop,
+#p_rewind,
+#p_full,
+#p_rs,
+#p_fs,
+#p_previous,
+#p_next {
     display: none;
 }
