@@ -1,0 +1,97 @@
+$bp:( s: 600px, m:1400px);
+@mixin menu_hamburguesa {
+    .hamburguesa {
+        display: block;
+    }
+    nav {
+        display: none;
+        li {
+            display: block;
+            margin: 0px;
+            padding: 10px;
+        }
+        li a {
+            font-size: 18px;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    .cambiar-tema-li {
+        font-size: 18px;
+        display: inline-block;
+        width: 90%;
+        margin-top: 10px;
+    }
+}
+
+
+/* For mobile phones: */
+
+@media only screen and (max-width: map-get($bp, s)) {
+    //Menú de la hamburguesa
+    @include menu_hamburguesa();
+    // Imágenes
+    .home-img {
+        width: 75%;
+    }
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    figure {
+        img {
+            width: 90%;
+        }
+    }
+    // Videos
+    video {
+        width: 100%;
+    }
+    // Pie de página
+    footer {
+        font-size: 14px;
+    }
+}
+
+
+/* For tablets: */
+
+@media only screen and (max-width: map-get($bp, m)) and (min-width: map-get($bp, s)) {
+    //Menú de la hamburguesa
+    @include menu_hamburguesa();
+    // Imágenes
+    .home-img {
+        width: 55%;
+    }
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    figure {
+        img {
+            width: 90%;
+        }
+    }
+    // Videos
+    video {
+        width: 100%;
+    }
+}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: map-get($bp, m)) {
+    // Imágenes
+    .home-img {
+        width: 35%;
+    }
+    .column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+    // Vídeos
+    video {
+        width: 70%;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad - Imágenes</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="../imagenes/icon_small.png">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="../dist/css/main.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Accesibilidad - Imágenes</h1>
+        <button class="hamburguesa" onclick="openNav();">
+            <i class="material-icons" onkeypress="if(event.key=='Enter')openNav();">menu</i>
+        </button>
+        <nav id="idNav" role="navigation">
+            <ul id="idUl">
+                <li><a href="..">Home</a></li>
+                <li><a href="teoria.html">Teoría</a></li>
+                <li><a href="formularios.html">Formularios</a></li>
+                <li><a class="aMarcado" href="imagenes.html">Imágenes</a></li>
+                <li><a href="videos.html">Vídeos</a></li>
+                <li><a href="extensiones.html">Extensiones</a></li>
+                <li id="idTemaLi" class="cambiar-tema-li tema-oscuro" onclick="cambiarTema();" role="button" tabindex="0" onkeypress="if(event.key=='Enter')cambiarTema();">Cambiar de tema</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="column">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello1_large_2x.jpg, ..\imagenes\cello1_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello1_medium.jpg" />
+                        <img src="..\imagenes\cello1_small.jpg" alt="Artista sentado tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello2_large_2x.jpg, ..\imagenes\cello2_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello2_medium.jpg" />
+                        <img src="..\imagenes\cello2_small.jpg" alt="Por la noche, un violonchelo sobre el suelo de una calle." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello3_large_2x.jpg, ..\imagenes\cello3_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello3_medium.jpg" />
+                        <img src="..\imagenes\cello3_small.jpg" alt="Muestra una partitura con una mano tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello3_large_2x.jpg, ..\imagenes\cello3_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello3_medium.jpg" />
+                        <img src="..\imagenes\cello3_small.jpg" alt="Muestra una partitura con una mano tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello1_large_2x.jpg, ..\imagenes\cello1_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello1_medium.jpg" />
+                        <img src="..\imagenes\cello1_small.jpg" alt="Artista sentado tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello2_large_2x.jpg, ..\imagenes\cello2_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello2_medium.jpg" />
+                        <img src="..\imagenes\cello2_small.jpg" alt="Por la noche, un violonchelo sobre el suelo de una calle." tabindex="0">
+                    </picture>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello2_large_2x.jpg, ..\imagenes\cello2_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello2_medium.jpg" />
+                        <img src="..\imagenes\cello2_small.jpg" alt="Por la noche, un violonchelo sobre el suelo de una calle." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello3_large_2x.jpg, ..\imagenes\cello3_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello3_medium.jpg" />
+                        <img src="..\imagenes\cello3_small.jpg" alt="Muestra una partitura con una mano tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="..\imagenes\cello1_large_2x.jpg, ..\imagenes\cello1_large_1x.jpg" />
+                        <source media="(min-width: 600px)" srcset="..\imagenes\cello1_medium.jpg" />
+                        <img src="..\imagenes\cello1_small.jpg" alt="Artista sentado tocando el violonchelo." tabindex="0">
+                    </picture>
+                </figure>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
+    </footer>
+
+    <script src="../dist/js/main_script.js"></script>
+</body>
+
+</html>

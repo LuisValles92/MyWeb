@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad - Vídeos</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="../imagenes/icon_small.png">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="../dist/css/main.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Accesibilidad - Vídeos</h1>
+        <button class="hamburguesa" onclick="openNav();">
+            <i class="material-icons" onkeypress="if(event.key=='Enter')openNav();">menu</i>
+        </button>
+        <nav id="idNav" role="navigation">
+            <ul id="idUl">
+                <li><a href="..">Home</a></li>
+                <li><a href="teoria.html">Teoría</a></li>
+                <li><a href="formularios.html">Formularios</a></li>
+                <li><a href="imagenes.html">Imágenes</a></li>
+                <li><a class="aMarcado" href="videos.html">Vídeos</a></li>
+                <li><a href="extensiones.html">Extensiones</a></li>
+                <li id="idTemaLi" class="cambiar-tema-li tema-oscuro" onclick="cambiarTema();" role="button" tabindex="0" onkeypress="if(event.key=='Enter')cambiarTema();">Cambiar de tema</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controles">
+            <button aria-labelledby="p_play" onclick="playVideo();">
+                <p id="p_play">Play or Pause video</p>
+                <i class="material-icons" id="iPlayPause">play_circle_outline</i>
+            </button>
+            <button aria-labelledby="p_stop" onclick="stopVideo()">
+                <p id="p_stop">Stop video</p>
+                <i class="material-icons">stop</i>
+            </button>
+            <button aria-labelledby="p_rewind" onclick="rewindVideo();">
+                <p id="p_rewind">Rewind video</p>
+                <i class="material-icons">fast_rewind</i>
+            </button>
+            <button aria-labelledby="p_full" onclick="fullscreenVideo();">
+                <p id="p_full">Fullscreen video</p>
+                <i class="material-icons">fullscreen</i>
+            </button>
+        </div>
+        <div class="subcontroles">
+            <button aria-labelledby="p_rs" onclick="replayTenSeconds();">
+                <p id="p_rs">Replay 10 seconds video</p>
+                <i class="material-icons">replay_10</i>
+            </button>
+            <button aria-labelledby="p_fs" onclick="forwardTenSeconds();">
+                <p id="p_fs">Forward 10 seconds video</p>
+                <i class="material-icons">forward_10</i>
+            </button>
+            <button aria-labelledby="p_previous" onclick="previous();">
+                <p id="p_previous">Previous video</p>
+                <i class="material-icons">skip_previous</i>
+            </button>
+            <button aria-labelledby="p_next" onclick="next();">
+                <p id="p_next">Next video</p>
+                <i class="material-icons">skip_next</i>
+            </button>
+        </div>
+        <p id="info_video" tabindex="0"></p>
+        <video poster="../imagenes/cello2_large_2x.jpg" id="myVideo">
+            <source src='../videos/chelovideo1.mp4' type='video/mp4'>
+            <source src='../videos/chelovideo1.ogg' type='video/ogg'>
+            <p>Su navegador no soporta la etiqueta HTML5 de video, <a href="../videos/chelovideo1.mp4">este es un enlace directo al vídeo</a></p>
+        </video>
+    </main>
+
+    <footer>
+        <h3>DESARROLLADOR: LUIS VALLES PASTOR</h3>
+    </footer>
+
+    <script src="../dist/js/main_script.js"></script>
+    <script src="../dist/js/video_script.js"></script>
+</body>
+
+</html>
