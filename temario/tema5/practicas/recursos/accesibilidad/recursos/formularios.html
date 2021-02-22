@@ -39,15 +39,15 @@
             <input type="text" id="nombre" size="20" required="required" aria-required="true">
             <label for="edad">* EDAD: (Mayor de edad)</label>
             <input type="number" id="edad" min="18" max="100" step="1" required="required" aria-required="true">
-            <input id="promo" type="checkbox" aria-checked="false"></input>
-            <label for="promo">PREMIUM</label>
+            <input id="premium" type="checkbox" aria-checked="false" onchange="intercambiarValorPremium();"></input>
+            <label for="premium">PREMIUM</label>
             <label class="d-block">SEXO:</label>
-            <input type="radio" name="sexo" id="masculino" checked="checked" aria-checked="true">
-            <label class="m-right gray-c" for="masculino">MASCULINO</label>
-            <input type="radio" name="sexo" id="femenino" aria-checked="false">
-            <label class="gray-c" for="femenino">FEMENINO</label>
+            <input type="radio" name="sexo" id="masculino" checked="checked" aria-checked="true" onchange="intercambiarValoresMasculino();" aria-label="Sexo masculino">
+            <label class="m-right gray-c" for="masculino">MAS.</label>
+            <input type="radio" name="sexo" id="femenino" aria-checked="false" onchange="intercambiarValoresFemenino();" aria-label="Sexo femenino">
+            <label class="gray-c" for="femenino">FEM.</label>
             <label class="d-block" for="ciudad">* CIUDAD:</label>
-            <select id="ciudad">
+            <select id="ciudad" aria-required="true">
                 <option value="SELECCIONAR">SELECCIONAR</option>
                 <option value="BARCELONA">BARCELONA</option>
                 <option value="MADRID">MADRID</option>

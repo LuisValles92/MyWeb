@@ -34,3 +34,21 @@ function mostrarDialog() {
 function cerrarDialog() {
     document.getElementById("confirmar_dialog").close();
 }
+
+function intercambiarValoresMasculino() {
+    document.getElementById("masculino").setAttribute("aria-checked", "true");
+    document.getElementById("femenino").setAttribute("aria-checked", "false");
+}
+
+function intercambiarValoresFemenino() {
+    document.getElementById("masculino").setAttribute("aria-checked", "false");
+    document.getElementById("femenino").setAttribute("aria-checked", "true");
+}
+
+function intercambiarValorPremium() {
+    if (document.getElementById("premium").checked) {
+        document.getElementById("premium").setAttribute("aria-checked", "true");
+    } else {
+        document.getElementById("premium").setAttribute("aria-checked", "false");
+    }
+}

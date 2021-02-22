@@ -276,6 +276,10 @@ footer {
     margin-top: 10px;
   }
 
+  article p {
+    text-align: left;
+  }
+
   .home-img {
     width: 75%;
   }

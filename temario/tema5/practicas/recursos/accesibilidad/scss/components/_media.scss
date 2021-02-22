@@ -30,6 +30,12 @@ $bp:( s: 600px, m:1400px);
 @media only screen and (max-width: map-get($bp, s)) {
     //Menú de la hamburguesa
     @include menu_hamburguesa();
+    // Teoría
+    article {
+        p {
+            text-align: left;
+        }
+    }
     // Imágenes
     .home-img {
         width: 75%;
