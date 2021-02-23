@@ -23,11 +23,11 @@ nav ul {
   text-align: center;
   padding: 0px;
 }
-nav li {
+nav ul li {
   display: inline;
   margin: 30px;
 }
-nav li a {
+nav ul li a {
   background-color: #bdbdbd;
   color: black;
   box-shadow: 2px 5px 5px black;
@@ -35,7 +35,7 @@ nav li a {
   font-size: 20px;
   padding: 15px;
 }
-nav li a:hover {
+nav ul li a:hover {
   background-color: #001083;
   color: #fafafa;
   box-shadow: 2px 5px 5px #fafafa;
@@ -93,7 +93,7 @@ footer {
   }
 
   nav ul li {
-    margin: 10px;
+    display: inline-block;
   }
 
   footer {

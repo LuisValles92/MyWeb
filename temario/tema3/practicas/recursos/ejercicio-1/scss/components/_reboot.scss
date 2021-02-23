@@ -36,17 +36,17 @@ nav {
     ul {
         text-align: center;
         padding: 0px;
-    }
-    li {
-        display: inline;
-        margin: 30px;
-        a {
-            @include inactivo();
-            text-decoration: none;
-            font-size: 20px;
-            padding: 15px;
-            &:hover {
-                @include activo();
+        li {
+            display: inline;
+            margin: 30px;
+            a {
+                @include inactivo();
+                text-decoration: none;
+                font-size: 20px;
+                padding: 15px;
+                &:hover {
+                    @include activo();
+                }
             }
         }
     }

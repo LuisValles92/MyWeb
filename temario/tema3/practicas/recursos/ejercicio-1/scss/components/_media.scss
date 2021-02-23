@@ -17,9 +17,9 @@ $bp:( s: 600px, m:768px);
 
 @media only screen and (max-width: map-get($bp, s)) {
     @include contenedor_en_bloque();
-    //Junta los elementos de la lista de la barra de navegación
+    // Los elementos que forman la barra de navegación en bloque
     nav ul li {
-        margin: 10px;
+        display: inline-block;
     }
     footer {
         font-size: 14px;
