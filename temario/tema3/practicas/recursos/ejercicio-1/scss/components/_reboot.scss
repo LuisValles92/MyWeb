@@ -1,0 +1,100 @@
+// Mixins
+@mixin activo {
+    background-color: $secondary_color;
+    color: $white;
+    box-shadow: 2px 5px 5px $white;
+}
+
+@mixin inactivo {
+    background-color: $gray;
+    color: black;
+    box-shadow: 2px 5px 5px black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente;
+    margin: 0px;
+    background-color: $white;
+}
+
+// Encabezado
+header {
+    background-color: $primary_color;
+    color: $secondary_color;
+    padding: 15px;
+    text-align: center;
+}
+
+// Barra de navegación
+nav {
+    background-color: $primary_color;
+    padding: 10px;
+    ul {
+        text-align: center;
+        padding: 0px;
+    }
+    li {
+        display: inline;
+        margin: 30px;
+        a {
+            @include inactivo();
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            &:hover {
+                @include activo();
+            }
+        }
+    }
+}
+
+// Enlace de la barra de navegación activo
+.aMarcado {
+    @include activo();
+}
+
+// Cuerpo
+.contenedor {
+    display: flex;
+    margin: auto;
+    div {
+        flex: 1;
+        position: relative;
+        $valor: 10px;
+        margin: {
+            right: $valor;
+            left: $valor;
+            bottom: 20px;
+        }
+        background-color: lightyellow;
+        h2 {
+            text-align: center;
+            color: $secondary_color;
+        }
+        video {
+            width: 100%;
+            display: block;
+            border: solid 2px $secondary_color;
+            box-shadow: 2px 5px 5px $secondary_color;
+            border-radius: 10px;
+            margin: {
+                left: auto;
+                right: auto;
+            }
+        }
+    }
+}
+
+// Pie de página
+footer {
+    background-color: $primary_color;
+    color: $secondary_color;
+    text-align: center;
+    position: sticky;
+    bottom: 0px;
+    padding: 1px;
+}

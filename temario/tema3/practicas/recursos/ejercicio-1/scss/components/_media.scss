@@ -1,0 +1,34 @@
+@mixin contenedor_en_bloque {
+    .contenedor {
+        display: block;
+        div {
+            $valor: 30px;
+            margin: {
+                top: $valor;
+                bottom: $valor;
+            }
+        }
+    }
+}
+
+$bp:( s: 600px, m:768px);
+
+/* For mobile phones: */
+
+@media only screen and (max-width: map-get($bp, s)) {
+    @include contenedor_en_bloque();
+    //Junta los elementos de la lista de la barra de navegación
+    nav ul li {
+        margin: 10px;
+    }
+    footer {
+        font-size: 14px;
+    }
+}
+
+
+/* For tablets: */
+
+@media only screen and (max-width: map-get($bp, m)) and (min-width: map-get($bp, s)) {
+    @include contenedor_en_bloque();
+}
